@@ -1,0 +1,418 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PredictionMart - Trade the Future</title>
+    <!-- Load Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Use Inter font -->
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap');
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: #f7f9fb; /* Light background for a clean look */
+        }
+        .header-bg {
+            background-color: #0070f3; /* Robinhood-like primary blue */
+            background-image: linear-gradient(135deg, #0070f3 0%, #00c7e5 100%);
+        }
+        .text-gradient {
+            background-image: linear-gradient(45deg, #0070f3, #00c7e5);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+        /* Custom scrollbar for better feel */
+        ::-webkit-scrollbar {
+            width: 8px;
+        }
+        ::-webkit-scrollbar-thumb {
+            background-color: #a0aec0;
+            border-radius: 4px;
+        }
+        ::-webkit-scrollbar-track {
+            background: #f7f9fb;
+        }
+    </style>
+</head>
+<body>
+
+<div id="app">
+    <!-- Navigation Bar -->
+    <nav class="bg-white shadow-lg sticky top-0 z-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between h-16">
+                <div class="flex">
+                    <div class="flex-shrink-0 flex items-center">
+                        <span class="text-xl font-extrabold text-gradient">PredictionMart</span>
+                    </div>
+                </div>
+                <div class="flex items-center space-x-4">
+                    <a href="#about" class="text-gray-600 hover:text-gray-900 font-medium transition duration-150 ease-in-out">About</a>
+                    <a href="#how-it-works" class="text-gray-600 hover:text-gray-900 font-medium transition duration-150 ease-in-out">How It Works</a>
+                    <a href="#calculator" class="text-gray-600 hover:text-gray-900 font-medium transition duration-150 ease-in-out">Calculator</a>
+                    <button class="ml-4 px-4 py-2 border border-transparent text-sm font-medium rounded-full text-white bg-blue-600 hover:bg-blue-700 shadow-md transition duration-150 ease-in-out">
+                        Sign Up
+                    </button>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section (Mission Statement) -->
+    <header class="header-bg py-24 sm:py-32 rounded-b-3xl">
+        <div class="max-w-4xl mx-auto px-6 text-center">
+            <h1 class="text-5xl sm:text-7xl font-extrabold text-white leading-tight mb-6">
+                Trade the <span class="text-yellow-300">World's Outcomes</span>.
+            </h1>
+            <p id="mission-statement" class="text-xl text-white font-light opacity-90 mx-auto max-w-2xl">
+                <!-- Content will be injected here -->
+            </p>
+            <div class="mt-10">
+                <button class="px-8 py-3 border border-transparent text-lg font-bold rounded-full text-blue-800 bg-white hover:bg-gray-100 shadow-xl transform hover:scale-105 transition duration-300 ease-in-out">
+                    Start Predicting Today
+                </button>
+            </div>
+        </div>
+    </header>
+
+    <main class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
+
+        <!-- Definitional and Conceptual Preliminaries (How It Works) -->
+        <section id="how-it-works" class="pt-12 mb-20">
+            <h2 class="text-4xl font-bold text-gray-900 text-center mb-12">
+                <span id="preliminaries-title" class="text-gradient">Understanding Prediction Markets</span>
+            </h2>
+            <div class="grid md:grid-cols-2 gap-10">
+                <!-- What is a Prediction Market? -->
+                <div class="bg-white p-8 rounded-2xl shadow-xl hover:shadow-2xl transition duration-300 border border-gray-100">
+                    <h3 class="text-2xl font-bold text-blue-600 mb-4 flex items-center">
+                        Prediction Markets Explained
+                    </h3>
+                    <p id="preliminaries-definition" class="text-gray-700 text-lg leading-relaxed">
+                        <!-- Content will be injected here -->
+                    </p>
+                </div>
+                <!-- Price to Probability -->
+                <div class="bg-white p-8 rounded-2xl shadow-xl hover:shadow-2xl transition duration-300 border border-gray-100">
+                    <h3 class="text-2xl font-bold text-blue-600 mb-4 flex items-center">
+                        Price = Probability
+                    </h3>
+                    <p id="preliminaries-price-explanation" class="text-gray-700 text-lg leading-relaxed">
+                        <!-- Content will be injected here -->
+                    </p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Customer Segment Personas -->
+        <section class="mb-20">
+            <h2 class="text-3xl font-bold text-gray-900 text-center mb-12">Who Trades on PredictionMart?</h2>
+            <div id="personas-container" class="grid lg:grid-cols-3 gap-8">
+                <!-- Persona cards will be injected here by JS -->
+            </div>
+        </section>
+
+        <!-- Operational Details (How to Participate) -->
+        <section class="mb-20">
+            <h2 id="operational-title" class="text-3xl font-bold text-gray-900 text-center mb-12">
+                <!-- Title will be injected here -->
+            </h2>
+            <div id="operational-steps-container" class="grid md:grid-cols-3 gap-8">
+                <!-- Steps will be injected here by JS -->
+            </div>
+        </section>
+
+
+        <!-- Example Transactions -->
+        <section class="mb-20">
+            <h2 class="text-3xl font-bold text-gray-900 text-center mb-12">Real-World Examples</h2>
+            <div id="examples-container" class="space-y-12">
+                <!-- Examples will be injected here by JS -->
+            </div>
+        </section>
+
+        <!-- Payoff Calculator Widget -->
+        <section id="calculator" class="bg-white p-8 sm:p-12 rounded-2xl shadow-2xl mb-20 border border-blue-100">
+            <h2 class="text-3xl font-bold text-gradient mb-6">Payoff Calculator</h2>
+            <p class="text-gray-600 mb-8">Estimate your potential return if your prediction comes true.</p>
+
+            <form id="payoff-form" class="space-y-6">
+                <div>
+                    <label for="price-per-share" class="block text-sm font-medium text-gray-700 mb-2">Price Per Share (₹, between 0.01 and 0.99)</label>
+                    <input type="number" id="price-per-share" min="0.01" max="0.99" step="0.01" placeholder="e.g., 0.65" required
+                           class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-blue-500 focus:border-blue-500 transition duration-150">
+                </div>
+                <div>
+                    <label for="investment-amount" class="block text-sm font-medium text-gray-700 mb-2">Total Investment Amount (₹)</label>
+                    <input type="number" id="investment-amount" min="1" step="1" placeholder="e.g., 1000" required
+                           class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-blue-500 focus:border-blue-500 transition duration-150">
+                </div>
+                <button type="submit" class="w-full py-3 mt-4 bg-blue-600 text-white font-bold rounded-lg hover:bg-blue-700 transition duration-300 shadow-md">
+                    Calculate Payoff
+                </button>
+            </form>
+
+            <div id="payoff-result-box" class="mt-8 bg-blue-50 p-6 rounded-xl border border-blue-200 hidden">
+                <h4 class="text-xl font-semibold text-blue-700 mb-3">Potential Results</h4>
+                <p id="payoff-shares" class="text-gray-800 text-lg"><span class="font-bold">Shares Purchased:</span> <span></span></p>
+                <p id="payoff-total" class="text-gray-800 text-lg"><span class="font-bold">Total Potential Payoff:</span> <span class="text-green-600 font-extrabold"></span></p>
+                <p class="text-sm text-gray-500 mt-2">Note: Each share settles at ₹1.00 if the predicted event occurs.</p>
+            </div>
+            <div id="payoff-error-box" class="mt-8 bg-red-100 p-4 rounded-xl border border-red-300 hidden">
+                <p id="payoff-error-message" class="text-red-700 font-medium"></p>
+            </div>
+        </section>
+
+        <!-- YouTube Embed -->
+        <section class="mb-20">
+            <h2 class="text-3xl font-bold text-gray-900 text-center mb-12">What is the Wisdom of the Crowd?</h2>
+            <div class="aspect-w-16 aspect-h-9 max-w-4xl mx-auto rounded-xl overflow-hidden shadow-2xl">
+                <!-- Embedded YouTube video -->
+                <iframe class="w-full h-96" 
+                        src="https://www.youtube.com/embed/xA27x7GRMZQ" 
+                        title="YouTube video player" 
+                        frameborder="0" 
+                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
+                        allowfullscreen>
+                </iframe>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="bg-gray-800 text-white mt-16 rounded-t-3xl">
+        <div class="max-w-7xl mx-auto py-12 px-4 overflow-hidden sm:px-6 lg:px-8">
+            <nav class="-mx-5 -my-2 flex flex-wrap justify-center" aria-label="Footer">
+                <div class="px-5 py-2">
+                    <a href="#" class="text-base text-gray-300 hover:text-white">About</a>
+                </div>
+                <div class="px-5 py-2">
+                    <a href="#" class="text-base text-gray-300 hover:text-white">Events</a>
+                </div>
+                <div class="px-5 py-2">
+                    <a href="#" class="text-base text-gray-300 hover:text-white">FAQ</a>
+                </div>
+                <div class="px-5 py-2">
+                    <a href="#" class="text-base text-gray-300 hover:text-white">Regulatory</a>
+                </div>
+            </nav>
+            <p class="mt-8 text-center text-base text-gray-400">
+                &copy; 2024 PredictionMart. Launched from Singapore/Dubai. Serving East & West Asian Markets.
+            </p>
+            <p class="mt-2 text-center text-xs text-gray-500">
+                Disclaimer: Trading in prediction markets involves risk. You may lose capital.
+            </p>
+        </div>
+    </footer>
+</div>
+
+<script>
+    // --- START: Generated Content Data ---
+    const generatedContent = {
+        "mission_statement": "To empower the region with market-driven foresight. PredictionMart transforms your conviction about future events in tech, trade, and geopolitics into tangible assets, making the collective wisdom of Asia accessible and actionable.",
+        "personas": [
+            {
+                "name": "Arjun Varma",
+                "region": "Mumbai, India",
+                "profile": "A software engineer (30s) who closely follows the Indian startup ecosystem and global tech trends. He reads detailed regulatory reports and tech news daily.",
+                "goal": "To use his deep industry knowledge to generate modest, informed returns by trading on upcoming IPOs, merger approvals, and technology launch dates."
+            },
+            {
+                "name": "Layla Chen",
+                "region": "Singapore",
+                "profile": "A business analyst (40s) with extensive experience in regional trade policy and economics. She seeks market inefficiencies.",
+                "goal": "To hedge against or profit from macroeconomic shifts, such as changes in interest rates, trade treaty outcomes, or major commodity price moves."
+            },
+            {
+                "name": "Zahid Khan",
+                "region": "Dubai, UAE",
+                "profile": "A financially savvy student (20s) interested in geopolitics and quick market cycles. He trades smaller amounts frequently based on political news.",
+                "goal": "To engage with global political outcomes, such as election results or regulatory policy changes, using the platform as an intellectual and financial outlet."
+            }
+        ],
+        "preliminaries_title": "Understanding Prediction Markets",
+        "preliminaries_definition": "A Prediction Market is simply an exchange where you trade shares on the future outcome of a specific event. Instead of trading company stock, you trade on whether a verifiable event (like 'Will Country X launch a new trade policy by Q4?') will happen or not. If your prediction is correct, the share pays out ₹1.00.",
+        "preliminaries_price_explanation": "The current price of a share reflects the market's collective belief in that event's probability. If a share costs ₹0.75, it means the market believes the event has a 75% chance of occurring. If you believe the probability is higher (say, 90%), you buy, expecting the price to rise. If you buy a share at ₹0.20 and the event happens, you profit ₹0.80 per share.",
+        "example_transactions": [
+            {
+                "scenario": "A market opens on the question: 'Will the Reserve Bank of India (RBI) raise the repo rate in the next policy meeting?' The price for YES is ₹0.30.",
+                "action": "You believe global inflation pressure is higher than the market thinks, giving YES a 60% chance. You buy 1,000 shares of YES at ₹0.30 each, investing ₹300.",
+                "outcome": "The RBI raises the rate (YES occurs). Your 1,000 shares each settle at ₹1.00. You receive ₹1,000. Your profit is ₹1,000 (Payout) - ₹300 (Investment) = ₹700."
+            },
+            {
+                "scenario": "A market opens on the question: 'Will 'NebulaTech' stock debut above its IPO price of ₹500 on listing day?' The price for NO is ₹0.85.",
+                "action": "You observe a massive subscription rate and believe the market is wrong; the price for NO (meaning it *will not* debut above ₹500) is too high. You sell (short) 500 shares of NO at ₹0.85, receiving ₹425.",
+                "outcome": "NebulaTech debuts at ₹750 (NO does *not* occur). The NO shares settle at ₹0.00. Since you sold shares that ended up being worthless, you keep the ₹425 you initially received. Your profit is ₹425."
+            }
+        ],
+        "operational_details": {
+            "title": "Participate in Three Simple Steps",
+            "steps": [
+                {
+                    "step": "1. Sign Up & Verify",
+                    "description": "Create your secure account. Complete the quick identity verification process required by regulatory bodies in Dubai/Singapore. Access is granted instantly."
+                },
+                {
+                    "step": "2. Deposit Funds",
+                    "description": "Deposit funds using secure, local payment methods. Your funds are held in regulated escrow accounts, ready for you to start trading on hundreds of events."
+                },
+                {
+                    "step": "3. Buy & Sell Shares",
+                    "description": "Browse events across Tech, Geopolitics, and Economics. Buy shares on outcomes you believe are likely, or sell shares on outcomes you believe are improbable. Watch the market move!"
+                }
+            ]
+        }
+    };
+    // --- END: Generated Content Data ---
+
+    // Utility function for creating Tailwind elements
+    function createEl(tag, classes = [], content = '') {
+        const el = document.createElement(tag);
+        if (Array.isArray(classes)) {
+            el.className = classes.join(' ');
+        } else if (typeof classes === 'string') {
+            el.className = classes;
+        }
+        if (content) {
+            el.innerHTML = content;
+        }
+        return el;
+    }
+
+    // --- Content Injection Functions ---
+
+    function injectMissionStatement() {
+        document.getElementById('mission-statement').textContent = generatedContent.mission_statement;
+    }
+
+    function injectPreliminaries() {
+        document.getElementById('preliminaries-title').textContent = generatedContent.preliminaries_title;
+        document.getElementById('preliminaries-definition').textContent = generatedContent.preliminaries_definition;
+        document.getElementById('preliminaries-price-explanation').textContent = generatedContent.preliminaries_price_explanation;
+    }
+
+    function injectPersonas() {
+        const container = document.getElementById('personas-container');
+        generatedContent.personas.forEach((p, index) => {
+            const card = createEl('div', ['bg-white', 'p-6', 'rounded-xl', 'shadow-lg', 'border', 'border-gray-100', 'transform', 'hover:scale-[1.02]', 'transition', 'duration-300']);
+            const iconClasses = ['h-8', 'w-8', 'p-1', 'rounded-full', 'mb-4', 'flex', 'items-center', 'justify-center', 'text-white'];
+            let icon;
+            if (index === 0) { // Tech Analyst
+                icon = createEl('div', [...iconClasses, 'bg-green-500'], '<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class="w-5 h-5"><path d="M10.5 1h3a2.5 2.5 0 0 1 2.5 2.5v5.8a2.5 2.5 0 0 0 2.5 2.5h2.5a2.5 2.5 0 0 1 2.5 2.5v1.9a2.5 2.5 0 0 1-2.5 2.5h-2.5a2.5 2.5 0 0 0-2.5 2.5v5.8a2.5 2.5 0 0 1-2.5 2.5h-3a2.5 2.5 0 0 1-2.5-2.5v-5.8a2.5 2.5 0 0 0-2.5-2.5H1.5a2.5 2.5 0 0 1-2.5-2.5v-1.9a2.5 2.5 0 0 1 2.5-2.5h2.5a2.5 2.5 0 0 0 2.5-2.5V3.5A2.5 2.5 0 0 1 10.5 1z"/></svg>');
+            } else if (index === 1) { // Macro Economist
+                icon = createEl('div', [...iconClasses, 'bg-indigo-500'], '<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class="w-5 h-5"><path fill-rule="evenodd" d="M12 2.25c-5.385 0-9.75 4.365-9.75 9.75s4.365 9.75 9.75 9.75 9.75-4.365 9.75-9.75S17.385 2.25 12 2.25Zm4.28 10.47a.75.75 0 0 0 0-1.06l-3.5-3.5a.75.75 0 0 0-1.06 0l-3.5 3.5a.75.75 0 0 0 1.06 1.06L10.5 9.56v5.94a.75.75 0 0 0 1.5 0V9.56l2.12 2.12a.75.75 0 0 0 1.06 0Z" clip-rule="evenodd" /></svg>');
+            } else { // Geopolitics/Student
+                icon = createEl('div', [...iconClasses, 'bg-red-500'], '<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class="w-5 h-5"><path fill-rule="evenodd" d="M10.5 3.75a6.75 6.75 0 1 0 0 13.5 6.75 6.75 0 0 0 0-13.5ZM2.25 10.5a8.25 8.25 0 1 1 15.592 3.868L20.25 18l-1.5 1.5-3.868-2.658A8.25 8.25 0 0 1 2.25 10.5Z" clip-rule="evenodd" /></svg>');
+            }
+
+            const header = createEl('h3', 'text-xl font-bold text-gray-900', p.name);
+            const region = createEl('p', 'text-sm text-blue-600 mb-3', p.region);
+            const profile = createEl('p', 'text-gray-700 mb-4', `<span class="font-semibold">Profile:</span> ${p.profile}`);
+            const goal = createEl('p', 'text-gray-700', `<span class="font-semibold text-gray-800">Goal:</span> ${p.goal}`);
+
+            card.appendChild(icon);
+            card.appendChild(header);
+            card.appendChild(region);
+            card.appendChild(profile);
+            card.appendChild(goal);
+            container.appendChild(card);
+        });
+    }
+
+    function injectOperationalDetails() {
+        const titleEl = document.getElementById('operational-title');
+        titleEl.textContent = generatedContent.operational_details.title;
+
+        const container = document.getElementById('operational-steps-container');
+        generatedContent.operational_details.steps.forEach(item => {
+            const card = createEl('div', ['bg-blue-50', 'p-6', 'rounded-xl', 'shadow-md', 'border', 'border-blue-200']);
+            const stepNum = createEl('div', 'text-3xl font-extrabold text-blue-600 mb-2', item.step.split('.')[0]);
+            const stepTitle = createEl('h4', 'text-lg font-semibold text-gray-900 mb-3', item.step.split('. ')[1]);
+            const description = createEl('p', 'text-gray-700', item.description);
+
+            card.appendChild(stepNum);
+            card.appendChild(stepTitle);
+            card.appendChild(description);
+            container.appendChild(card);
+        });
+    }
+
+    function injectExamples() {
+        const container = document.getElementById('examples-container');
+        generatedContent.example_transactions.forEach((example, index) => {
+            const accordion = createEl('div', ['bg-white', 'rounded-2xl', 'shadow-xl', 'border', 'border-gray-100', 'p-6']);
+
+            const header = createEl('h3', 'text-xl font-bold text-blue-600 mb-4 flex items-center', `<span class="text-3xl font-extrabold mr-3">${index + 1}.</span> Trade Scenario: ${example.scenario}`);
+
+            const scenario = createEl('div', 'p-4 rounded-lg bg-gray-50 border border-gray-200 mb-4');
+            scenario.innerHTML = `<span class="font-semibold text-gray-800">Your Action:</span> ${example.action}`;
+
+            const outcome = createEl('div', 'p-4 rounded-lg bg-green-50 border border-green-200');
+            outcome.innerHTML = `<span class="font-semibold text-green-700">The Outcome:</span> ${example.outcome}`;
+
+            accordion.appendChild(header);
+            accordion.appendChild(scenario);
+            accordion.appendChild(outcome);
+            container.appendChild(accordion);
+        });
+    }
+
+    // --- Payoff Calculator Logic ---
+
+    function calculatePayoff(event) {
+        event.preventDefault();
+
+        const priceInput = document.getElementById('price-per-share');
+        const investmentInput = document.getElementById('investment-amount');
+        const resultBox = document.getElementById('payoff-result-box');
+        const errorBox = document.getElementById('payoff-error-box');
+        const errorMessage = document.getElementById('payoff-error-message');
+
+        resultBox.classList.add('hidden');
+        errorBox.classList.add('hidden');
+
+        let price = parseFloat(priceInput.value);
+        let investment = parseFloat(investmentInput.value);
+
+        // Basic validation
+        if (isNaN(price) || isNaN(investment) || price <= 0 || price >= 1 || investment <= 0) {
+            errorMessage.textContent = 'Please enter a valid Price (between 0.01 and 0.99) and a valid Investment Amount (greater than 0).';
+            errorBox.classList.remove('hidden');
+            return;
+        }
+
+        // Calculate
+        // Number of shares purchased = Total Investment / Price per Share
+        const shares = Math.floor(investment / price);
+        
+        // Total Potential Payoff = Number of Shares * Settlement Price (₹1.00)
+        const totalPayoff = shares * 1.00;
+        
+        // Profit = Total Payoff - Investment
+        const profit = totalPayoff - investment;
+
+        // Display results
+        document.getElementById('payoff-shares').querySelector('span').textContent = shares.toLocaleString('en-IN');
+        document.getElementById('payoff-total').querySelector('span').textContent = `₹${totalPayoff.toLocaleString('en-IN', { minimumFractionDigits: 2 })}`;
+
+        resultBox.classList.remove('hidden');
+    }
+
+    // --- Initialization ---
+
+    document.addEventListener('DOMContentLoaded', () => {
+        // Inject all LLM-generated content
+        injectMissionStatement();
+        injectPreliminaries();
+        injectPersonas();
+        injectOperationalDetails();
+        injectExamples();
+
+        // Attach event listener for the calculator
+        document.getElementById('payoff-form').addEventListener('submit', calculatePayoff);
+    });
+</script>
+
+</body>
+</html>
